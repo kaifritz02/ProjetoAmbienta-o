@@ -1,94 +1,163 @@
-@import "compass/css3";
-@import url(https://fonts.googleapis.com/css?family=Vibur);
-*{
-  box-sizing:border-box;
-  -moz-box-sizing:border-box;
-  -webkit-box-sizing:border-box;
-  font-family:arial;
-}
-body{background:#000000;}
-h1{
-  color:#ccc;
-  text-align:center;
-  font-family: 'Vibur', cursive;
-  font-size: 50px;
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+.login-page {
+  width: 800px;
+  padding: 2% 0 0;
+  margin: auto;
+
 }
 
-.login-form{
-  width:350px;
-  padding:40px 30px;
-  background:#eee;
-  @include border-radius(4px);
-  margin:auto;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top:50%;
-  @include translateY(-50%);
-}
-.form-group{
+.login-form {
   position: relative;
-  margin-bottom:15px;
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+ 
 }
-.form-control{
-  width:100%;
-  height:50px;
-  border:none;
-  padding:5px 7px 5px 15px;
-  background:#fff;
-  color:#666;
-  border:2px solid #ddd;
-  @include border-radius(4px);
-    &:focus, &:focus + .fa{
-      border-color:#10CE88;
-      color:#10CE88;
-    }
+.form {
+  position: relative;
+  z-index: 1;
+  background: #191B1C;
+  top: 20px;
+  width: 400px;
+  height: 400px;
+  margin: 0 auto 100px;
+  padding: 60px;
+  box-shadow: 0 0 20px 0 rgba(80, 71, 71, 0.2), 0 5px 5px 0 rgba(70, 60, 60, 0.24);
+ 
 }
-.form-group .fa{
-  position: absolute;
-  right:15px;
-  top:17px;
-  color:#999;
+.form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  border-radius: 2px 2px 1px 1px;
+  background: #757272;
+  width: 115%;
+  border: 0;
+  bottom: -60px;
+  margin: 0 0 25px -30px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+  position: relative;
+  border-color: royalblue;
 }
-.log-status.wrong-entry {
- @include animation( wrong-log 0.3s);
+.form button {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: transparent;
+  border-color:#8d8d8d;
+  width: 35%;
+  position: relative;
+  left: 290px;
+  border-radius: 4px 4px 4px 4px;
+  bottom: -80px;
+  padding: 13px;
+  color: #ffffff;
+  font-size: 18px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
 }
-.log-status.wrong-entry .form-control, .wrong-entry .form-control + .fa {
-  border-color: #ed1c24;
-  color: #ed1c24;
+.form button:hover,.form button:active,.form button:focus {
+  background: transparent;
+  border-color: #5be235;
 }
-.log-btn{
-  background:#0AC986;
-  dispaly:inline-block;
-  width:100%;
-  font-size:16px;
-  height:50px;
-  color:#fff;
-  text-decoration:none;
-  border:none;
-  @include border-radius(4px);
+.form .message {
+  position: relative;
+  bottom: -70px;
+  left: -30px;
+  margin: 12px 0 0 3px;
+  color: #ffffff;
+  font-size: 15px;
+}
+.form .message a {
+  color: #ffffff;
+  font-size: 19px;
+  text-decoration: underline;
+}
+.form .register-form {
+  display: none;
+}
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 300px;
+  margin: 0 auto;
+}
+.container:before, .container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.container .info {
+  margin: 50px auto;
+  text-align: center;
+}
+.container .info h1 {
+  margin: 0 0 15px;
+  padding: 0;
+  font-size: 33px;
+  font-weight: 300;
+  color: #1a1a1a;
+}
+.container .info span {
+  color: #4d4d4d;
+  font-size: 12px;
+}
+.container .info span a {
+  color: #000000;
+  text-decoration: none;
+}
+.container .info span .fa {
+  color: #ffffff;
+}
+body {
+  background: #bbc7b4; /* fallback for old browsers */
+  background: rgb(141,194,111);
+  background: linear-gradient(90deg, rgba(141,194,111,1) 0%, rgba(118,184,82,1) 50%);
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;      
+}
+.logo{
+  position: relative;
+  bottom: -260px;
+  right: -260px;
+  margin: 23px;
+  float: center;
 }
 
-.link{
-  text-decoration:none;
-  color:#C6C6C6;
-  float:right;
-  font-size:12px;
-  margin-bottom:15px;
-  &:hover{
-    text-decoration: underline;
-    color:#8C918F;
-  }
-}
-.alert{
-  display:none;
-  font-size:12px;
-  color:#f00;
-  float:left;
-}
-@include keyframes (wrong-log) {
-  0%, 100% { left: 0px;}
-  20% , 60%{left: 15px;}
-  40% , 80%{left: -15px;}
+.attention-login {
+  font-family: "Roboto", sans-serif;
+  font-size: 19px;
+  position: relative;
+  left: -29px;
+  bottom: -60px;
+  user-select: none;
 }
 
+.attention-senha {
+  font-family: "Roboto", sans-serif;
+  font-size: 19px;
+  position: relative;
+  left: -30px;
+  bottom: -60px;
+  user-select: none;
+
+}
+
+.form .ctb {
+  position: relative;
+  bottom: -10px;
+  left: -220px  
+}
+
+.ct {
+  font-family: "Roboto", sans-serif;
+  position: relative;
+  bottom: 50px;
+  right: 7px;
+  font-size: 18px;
+
+  
+
+}
